@@ -46,6 +46,7 @@ import { RouterLink } from '@angular/router';
 import { heartOutline, mailOutline, paperPlane, paperPlaneOutline, archiveOutline, trashOutline, warningOutline, homeOutline, peopleOutline } from 'ionicons/icons';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { initializeApp } from "firebase/app";
 import { environment } from 'src/environments/environment';
 
 register();
@@ -55,7 +56,9 @@ register();
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, RouterLink],
+  imports: [AngularFireModule.initializeApp(environment.firebaseConfig),
+    IonicModule, CommonModule, RouterLink,
+  AngularFireModule, AngularFireAuthModule],
 })
 export class AppComponent {
 
