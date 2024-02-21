@@ -1,19 +1,20 @@
 import { Component, EnvironmentInjector, inject } from '@angular/core';
-import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
+import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonMenuButton, IonButtons } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { triangle, ellipse, square } from 'ionicons/icons';
+import {arrowBackOutline, arrowForwardOutline, triangle, ellipse, square, homeOutline, homeSharp, peopleOutline, peopleSharp, chatboxEllipsesOutline, chatboxEllipsesSharp, notificationsOutline, notificationsSharp } from 'ionicons/icons';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
   styleUrls: ['tabs.page.scss'],
   standalone: true,
-  imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel],
+  imports: [IonTabs,IonButtons, IonTabBar, IonTabButton, IonIcon, IonLabel, IonMenuButton],
 })
+
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
 
   constructor() {
-    addIcons({ triangle, ellipse, square });
+    addIcons({ arrowBackOutline, arrowForwardOutline, triangle, ellipse, square, homeOutline, homeSharp, peopleOutline, peopleSharp, chatboxEllipsesOutline, chatboxEllipsesSharp, notificationsOutline, notificationsSharp  });
   }
 }
