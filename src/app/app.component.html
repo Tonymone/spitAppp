@@ -35,8 +35,11 @@
               <ion-label class="menu-label">{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
+            <ion-icon [name]="(themeService.isDarkMode$ | async) ? 'sunny' : 'moon'"></ion-icon>
+            <ion-toggle (ionChange)="toggleTheme($event)">Change Theme</ion-toggle>
         </ion-list>
       </ion-content>
+
     </ion-menu>
 
     <ion-router-outlet id="main-content"></ion-router-outlet>

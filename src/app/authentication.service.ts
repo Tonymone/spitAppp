@@ -19,4 +19,12 @@ export class AuthenticationService {
   async resetpassword(email: string){
     return await this.ngFireAuth.sendPasswordResetEmail(email);
   }
+
+  async signOut(){
+    return await this.ngFireAuth.signOut();
+  }
+
+  async getProfile(){
+    return await this.ngFireAuth.currentUser;
+  }
 }

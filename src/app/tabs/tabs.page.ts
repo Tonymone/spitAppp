@@ -1,7 +1,7 @@
 import { Component, EnvironmentInjector, inject } from '@angular/core';
 import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonMenuButton, IonButtons } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import {arrowBackOutline, arrowForwardOutline, triangle, ellipse, square, homeOutline, homeSharp, peopleOutline, peopleSharp, chatboxEllipsesOutline, chatboxEllipsesSharp, notificationsOutline, notificationsSharp } from 'ionicons/icons';
+import { arrowBackOutline, arrowForwardOutline, triangle, ellipse, square, homeOutline, homeSharp, peopleOutline, peopleSharp, chatboxEllipsesOutline, chatboxEllipsesSharp, notificationsOutline, notificationsSharp } from 'ionicons/icons';
 
 @Component({
   selector: 'app-tabs',

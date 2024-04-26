@@ -2,7 +2,8 @@
   <ion-toolbar>
 
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <!-- <ion-menu-button></ion-menu-button> -->
+      <ion-icon name="arrow-back-outline"  [routerLink]="['../register']"></ion-icon>
     </ion-buttons>
 
     <ion-title>
@@ -47,7 +48,7 @@
         <p>Already a member? <a [routerLink]="['../login']">Login</a> </p>
       </div>
       <div style="display: flex; justify-content: center; align-items: center;">
-        <ion-button class="ion-margin">Register<ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+        <ion-button class="ion-margin" href="login/">Register<ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
       </div>      
     </div>
   </form>
